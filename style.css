@@ -1,0 +1,132 @@
+html, body
+{
+	padding: 0;
+	margin: 0;
+}
+
+.bigBox, .box, .dimDisplay, .smallBox
+{
+	display: flex;
+}
+
+.bigBox, .box
+{
+	height: 100vh;
+	position: absolute;
+}
+
+.bigBox
+{
+	flex-direction: row;
+}
+
+.box
+{
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+	flex-wrap: wrap;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+.dimDisplay
+{
+	width: 100%;
+	height: 20vh;
+	align-items: center;
+	justify-content: center;
+	font-size: 10vh;
+}
+
+.smallBox
+{
+	border: 1px solid;
+	border-radius: 2vw;
+}
+
+#box0
+{
+	flex-direction: column;
+}
+
+#box1
+{
+	flex-direction: row;
+}
+
+@media only screen and (max-width: 499px)
+{
+	.box
+	{
+		width: 100vw;
+	}	
+	#box0
+	{
+		top: 0vh;
+	}	
+	#box1
+	{
+		top: 100vh;
+	}
+	#box2
+	{
+		top: 200vh;
+	}
+	.smallBox
+	{
+		width: 12.24vh;
+		height: 12.24vh;
+		margin: 1.36vh;
+	}
+}
+
+@media only screen and (min-width: 500px) and (max-width: 749px)
+{
+	#box0, #box2
+	{
+		width: 50vw;
+	}
+	#box1
+	{
+		width: 100vw;
+		top: 100vh;
+	}
+	#box2
+	{
+		left: 50vw;
+	}
+	.smallBox
+	{
+		width: 12.24vh;
+		height: 12.24vh;
+		margin: 1.36vh;
+	}
+}
+
+@media only screen and (min-width: 750px)
+{
+	#box0, #box2
+	{
+		width: 33vw;
+	}
+	#box0
+	{
+		left: 0vw;
+	}
+	#box1
+	{
+		width: 34vw;
+		left: 33vw;
+	}
+	#box2
+	{
+		left: 67vw;
+	}
+	.smallBox
+	{
+		width: 12.24vw;
+		height: 12.24vw;
+		margin: 1.36vw;
+	}
+}
